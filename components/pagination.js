@@ -7,7 +7,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
       return pages
     }
 
-    if (currentPage <= 3) {
+    if (currentPage <= 3) { 
       return [...pages.slice(0, 5), "...", totalPages]
     }
 

@@ -8,6 +8,8 @@ CREATE TABLE products (
   description TEXT NOT NULL,
   price DECIMAL(10, 2) NOT NULL,
   image_url TEXT,
+  usage TEXT, -- Added usage column (optional)
+  category TEXT NOT NULL DEFAULT 'regular', -- Added category column (e.g., 'regular', 'package', 'special')
   stock INTEGER DEFAULT 0,
   featured BOOLEAN DEFAULT false,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
@@ -50,4 +52,3 @@ CREATE TRIGGER update_orders_updated_at
 BEFORE UPDATE ON orders
 FOR EACH ROW
 EXECUTE FUNCTION update_updated_at_column();
-
