@@ -7,7 +7,8 @@ import { fetchProducts } from "../lib/supabase"
 import ProductCard from "../components/product-card"; // Use ProductCard directly
 import HeroSection from "../components/hero-section";
 import Pagination from "../components/pagination"; // Import Pagination
-import TestimonialCarousel from "../components/testimonial-carousel"; // Import the carousel
+// import TestimonialCarousel from "../components/testimonial-carousel"; // Import the static carousel
+import MovingTestimonialCarousel from "../components/moving-testimonial-carousel"; // Import the moving carousel
 
 const PRODUCTS_PER_PAGE = 8; // Define how many products per page
 
@@ -43,13 +44,11 @@ export default function Home() {
     window.scrollTo(0, 0) // Scroll to top on page change
   }
 
-  return (
-    <main className="min-h-screen">
-      <HeroSection />
-
-      <section className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-8">Discover Celestial Treasures</h2>
-        <p className="text-center text-lg mb-12 max-w-3xl mx-auto">
+return (
+  <main className="min-h-screen">
+    <HeroSection /><section className="container mx-auto px-4 py-16">
+      <h2 className="text-3xl font-bold text-center mb-8">Discover Celestial Treasures</h2>
+      <p className="text-center text-lg mb-12 max-w-3xl mx-auto">
           Explore our handpicked collection of astrology-inspired products designed to help you connect with the cosmos
           and embrace your celestial journey.
         </p>
@@ -108,7 +107,8 @@ export default function Home() {
         </div>
       </section>
 
-      <TestimonialCarousel /> {/* Add the carousel here */}
+      {/* Replace static carousel with the moving one */}
+      <MovingTestimonialCarousel />
     </main>
   );
 }

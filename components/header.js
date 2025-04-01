@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react" // Import useEffect
 import Link from "next/link";
 import { useRouter } from "next/navigation"; // Import useRouter
 import { useCart } from "../context/cart-context";
@@ -13,6 +13,11 @@ export default function Header() {
   const router = useRouter(); // Initialize router
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false); // Add isClient state
+
+  useEffect(() => {
+    setIsClient(true); // Set isClient to true after mount
+  }, []);
 
   // Handle search submission
   const handleSearch = (searchTerm) => {
@@ -57,7 +62,7 @@ export default function Header() {
               className="relative p-2 text-gray-700 hover:text-indigo-600 transition-colors"
             >
               <ShoppingCart className="h-6 w-6" />
-               {cartItemCount > 0 && (
+               {isClient && cartItemCount > 0 && ( // Conditionally render based on isClient
                  <span className="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
                    {cartItemCount}
                  </span>

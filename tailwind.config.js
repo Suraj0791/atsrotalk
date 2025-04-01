@@ -69,9 +69,16 @@ module.exports = {
 		  md: "calc(var(--radius) - 2px)",
 		  sm: "calc(var(--radius) - 4px)",
 		},
+        keyframes: { // Add keyframes definition
+          marquee: {
+            '0%': { transform: 'translateX(0%)' },
+            '100%': { transform: 'translateX(-100%)' }, // Adjust based on duplication
+          },
+        },
+        animation: { // Add animation utility
+          marquee: 'marquee 30s linear infinite', // Adjust duration as needed
+        },
 	  },
 	},
 	plugins: [require("tailwindcss-animate")],
   }
-  
-  
