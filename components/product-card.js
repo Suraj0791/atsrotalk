@@ -67,10 +67,11 @@ export default function ProductCard({ product }) {
             // Use the current image source based on state
             src={imageSources[currentImageIndex]}
             alt={`${product.name} - Image ${currentImageIndex + 1}`}
-            width={1600}
+            width={1600} // Keep original width/height for aspect ratio calculation
             height={899}
-            layout="responsive"
-            className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105" // Keep existing hover scale
+            layout="responsive" // Use responsive layout
+            // Ensure object-contain is applied and maintain transitions
+            className="object-contain w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
             priority={currentImageIndex === 0} // Prioritize loading the first image
           />
         </Link>

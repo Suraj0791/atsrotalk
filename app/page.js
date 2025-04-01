@@ -10,7 +10,7 @@ import Pagination from "../components/pagination"; // Import Pagination
 // import TestimonialCarousel from "../components/testimonial-carousel"; // Import the static carousel
 import MovingTestimonialCarousel from "../components/moving-testimonial-carousel"; // Import the moving carousel
 
-const PRODUCTS_PER_PAGE = 8; // Define how many products per page
+const PRODUCTS_PER_PAGE = 12; // Changed to 12 for 3 rows of 4 products
 
 export default function Home() {
   const [products, setProducts] = useState([])
@@ -46,12 +46,11 @@ export default function Home() {
 
 return (
   <main className="min-h-screen">
-    <HeroSection /><section className="container mx-auto px-4 py-16">
-      <h2 className="text-3xl font-bold text-center mb-8">Discover Celestial Treasures</h2>
-      <p className="text-center text-lg mb-12 max-w-3xl mx-auto">
-          Explore our handpicked collection of astrology-inspired products designed to help you connect with the cosmos
-          and embrace your celestial journey.
-        </p>
+    <HeroSection />
+    {/* Main Product Section */}
+    <section className="container mx-auto px-4 py-16">
+      <h2 className="text-3xl font-bold text-center mb-12">सिद्ध किये उत्पाद</h2> {/* Changed heading and increased bottom margin */}
+      {/* Removed descriptive paragraph */}
 
         {loading ? (
           <div className="flex justify-center py-12">
@@ -59,7 +58,8 @@ return (
           </div>
         ) : products.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Added horizontal padding px-8 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-8">
               {products.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
@@ -71,9 +71,10 @@ return (
         )}
       </section>
 
+      {/* Special Products / Features Section */}
       <section className="bg-gradient-to-r from-purple-900 to-indigo-900 py-20 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Align With The Stars</h2>
+          <h2 className="text-3xl font-bold mb-6">आपके लिए विशिष्ट सिद्ध किये उत्पाद</h2> {/* Changed heading */}
           <p className="max-w-2xl mx-auto text-lg mb-8">
             Our products are crafted with intention, designed to help you harness the power of the cosmos in your daily
             life.

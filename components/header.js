@@ -39,10 +39,10 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6 items-center">
             <Link href="/packages" className="text-gray-700 hover:text-indigo-600 transition-colors">
-              Package
+              सिद्ध किये पैकेज {/* Changed text */}
             </Link>
             <Link href="/special-products" className="text-gray-700 hover:text-indigo-600 transition-colors">
-              Special Products
+              सिद्ध किये उत्पाद {/* Changed text */}
             </Link>
             <Link href="/our-story" className="text-gray-700 hover:text-indigo-600 transition-colors">
               Our Story
@@ -93,14 +93,14 @@ export default function Header() {
                 className="block px-4 py-2 text-gray-700 hover:text-indigo-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Package
+                सिद्ध किये पैकेज {/* Changed text */}
               </Link>
               <Link
                 href="/special-products"
                 className="block px-4 py-2 text-gray-700 hover:text-indigo-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Special Products
+                सिद्ध किये उत्पाद {/* Changed text */}
               </Link>
               <Link
                 href="/our-story"
