@@ -28,7 +28,7 @@ export default function OurStoryPage() {
               Welcome to Astrology Shop, born from a lifelong fascination with the stars and the profound wisdom they hold. Our journey began not just as a business idea, but as a personal quest to understand the intricate dance between the cosmos and our lives here on Earth.
             </p>
             <p>
-              We believe that astrology is more than just horoscopes; it's a language of the universe, offering insights into our potential, challenges, and the unique path we're meant to walk. We felt a calling to create a space where others could access tools and resources to deepen their own connection to this ancient wisdom.
+              We believe that astrology is more than just horoscopes; it&apos;s a language of the universe, offering insights into our potential, challenges, and the unique path we&apos;re meant to walk. We felt a calling to create a space where others could access tools and resources to deepen their own connection to this ancient wisdom.
             </p>
             <figure className="my-8">
               <Image
@@ -41,10 +41,10 @@ export default function OurStoryPage() {
               <figcaption className="text-center text-sm text-gray-500 mt-2">The universe inspires everything we do.</figcaption>
             </figure>
             <p>
-              Each product in our shop is carefully curated or crafted with intention. We seek out authentic materials, collaborate with knowledgeable astrologers, and infuse every item with positive energy. Our goal is to provide you with meaningful objects that serve as anchors to your celestial journey, whether you're a seasoned practitioner or just beginning to explore the wonders of astrology.
+              Each product in our shop is carefully curated or crafted with intention. We seek out authentic materials, collaborate with knowledgeable astrologers, and infuse every item with positive energy. Our goal is to provide you with meaningful objects that serve as anchors to your celestial journey, whether you&apos;re a seasoned practitioner or just beginning to explore the wonders of astrology.
             </p>
             <p>
-              Thank you for being part of our story. We're honored to share this cosmic adventure with you.
+              Thank you for being part of our story. We&apos;re honored to share this cosmic adventure with you.
             </p>
           </div>
         </div>
