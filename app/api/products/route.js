@@ -55,9 +55,9 @@ export async function POST(request) {
   try {
     const body = await request.json()
 
-    // Validate required fields
-    if (!body.name || !body.price || !body.description || !body.image_url) {
-      return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
+    // Validate required fields - check for image_urls array
+    if (!body.name || !body.price || !body.description || !body.image_urls || !Array.isArray(body.image_urls) || body.image_urls.length === 0) {
+      return NextResponse.json({ error: "Missing required fields, including at least one image URL in image_urls array" }, { status: 400 })
     }
 
     // Insert product into database
@@ -68,7 +68,9 @@ export async function POST(request) {
           name: body.name,
           description: body.description,
           price: body.price,
-          image_url: body.image_url,
+          image_urls: body.image_urls, // Use image_urls array
+          usage: body.usage || null, // Include usage if provided
+          category: body.category || 'regular', // Include category if provided
           stock: body.stock || 0,
           featured: body.featured || false,
         },
@@ -86,4 +88,3 @@ export async function POST(request) {
     return NextResponse.json({ error: "Internal server error" }, { status: 500 })
   }
 }
-

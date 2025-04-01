@@ -14,7 +14,8 @@ export default async function ProductPage({ params }) {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        <ProductImageGallery images={[product.image_url]} />
+        {/* Pass the image_urls array directly */}
+        <ProductImageGallery images={product.image_urls || []} />
 
         <div className="flex flex-col">
           <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
@@ -24,18 +25,10 @@ export default async function ProductPage({ params }) {
             <p>{product.description}</p>
           </div>
 
-          <div className="mt-auto">
+          <div className="mt-auto pt-6"> {/* Adjusted padding */}
             <AddToCartButton product={product} />
 
-            <div className="mt-8 border-t pt-6">
-              <h3 className="text-lg font-semibold mb-2">Shipping Information</h3>
-              <p className="text-gray-600 mb-4">
-                Free shipping on all orders over ₹1000. Delivery within 5-7 business days.
-              </p>
-
-              <h3 className="text-lg font-semibold mb-2">Return Policy</h3>
-              <p className="text-gray-600">30-day return policy. Please contact us for return shipping details.</p>
-            </div>
+            {/* Removed Shipping and Return Policy sections */}
           </div>
         </div>
       </div>
@@ -44,4 +37,3 @@ export default async function ProductPage({ params }) {
     </div>
   )
 }
-

@@ -7,7 +7,7 @@ CREATE TABLE products (
   name TEXT NOT NULL,
   description TEXT NOT NULL,
   price DECIMAL(10, 2) NOT NULL,
-  image_url TEXT,
+  image_urls TEXT[], -- Changed from image_url TEXT to store multiple URLs
   usage TEXT, -- Added usage column (optional)
   category TEXT NOT NULL DEFAULT 'regular', -- Added category column (e.g., 'regular', 'package', 'special')
   stock INTEGER DEFAULT 0,
