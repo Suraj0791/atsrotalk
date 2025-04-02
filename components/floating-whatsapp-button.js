@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { MessageSquare } from 'lucide-react'; // Using MessageSquare as placeholder
 
 export default function FloatingWhatsAppButton() {
-  const whatsappNumber = "917488612472"; // Country code included
+  const whatsappNumber = "918178540753"; // Country code included
   const whatsappMessage = encodeURIComponent("Hi i have a query");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 

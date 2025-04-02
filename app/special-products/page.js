@@ -56,10 +56,13 @@ export default function SpecialProductsPage() {
           <source src="/special products.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-black opacity-50"></div> {/* Optional overlay */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
+        {/* Optional overlay */}
         <div className="relative z-10 text-center text-white px-4">
           {/* Updated heading to match header link */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">सिद्ध किये उत्पाद</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            सिद्ध किये उत्पाद
+          </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto">
             Explore our complete collection of authentic astrological products.
           </p>
@@ -69,7 +72,9 @@ export default function SpecialProductsPage() {
       {/* All Products Listing Section */}
       <section className="container mx-auto px-4 py-16">
         {/* Updated heading */}
-        <h2 className="text-3xl font-bold text-center mb-12">सभी सिद्ध किये उत्पाद</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">
+          सभी सिद्ध किये उत्पाद
+        </h2>
 
         {loading ? (
           <div className="flex justify-center py-12">

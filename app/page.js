@@ -49,9 +49,9 @@ return (
     <HeroSection />
 
     {/* Vision Text Section - Moved up */}
-    <section className="container mx-auto px-4 py-16 animate-fade-in-down"> {/* Added animation */}
+    <section className="container mx-auto px-4 py-16 animate-fade-in-down bg-gradient-to-r from-orange-100 to-amber-100"> {/* Added animation and background */}
       <div className="text-center max-w-3xl mx-auto px-4"> {/* Container for vision text, removed bottom margin */}
-        <h3 className="text-2xl font-semibold mb-4 text-indigo-700">Vision of Samadhan Hoga</h3>
+        <h1 className="text-2xl font-semibold mb-4 text-red-600">Vision of Samadhan Hoga</h1> {/* Changed text color to red */}
         <p className="text-lg text-gray-700 mb-4">
           At Samadhan Hoga, we envision a world where astrology is not just a mystical art but a guiding force for personal empowerment and transformation. Our goal is to help individuals align with their true potential by offering deeply personalized astrology-based products that bring clarity, positivity, and balance to their lives.
         </p>
@@ -61,10 +61,10 @@ return (
       </div>
     </section>
 
-    {/* Main Product Section - Added animation */}
+    {/* Main Product Section - Added animation and background */}
     {/* Removed the separate Logo Image Section */}
-    <section className="container mx-auto px-4 py-16 animate-fade-in-down" style={{ animationDelay: '0.1s' }}> {/* Reset delay */}
-      <h2 className="text-3xl font-bold text-center mb-12">सिद्ध किये उत्पाद</h2> {/* Changed heading and increased bottom margin */}
+    <section className="container mx-auto px-4 py-16 animate-fade-in-down bg-gradient-to-r from-orange-100 to-amber-100" style={{ animationDelay: '0.1s' }}> {/* Reset delay, Added background */}
+      <h2 className="text-3xl font-bold text-center mb-12 text-red-600">सिद्ध किये उत्पाद</h2> {/* Changed heading text color to red */}
 
       {/* Product Grid */}
       {loading ? (
@@ -87,16 +87,16 @@ return (
       </section>
 
       {/* Special Products / Features Section - Added animation */}
-      <section className="bg-gradient-to-r from-purple-900 to-indigo-900 py-20 text-white animate-fade-in-down" style={{ animationDelay: '0.2s' }}> {/* Reset delay */}
+      <section className="bg-gradient-to-r from-indigo-600 to-indigo-800 py-20 text-white animate-fade-in-down" style={{ animationDelay: '0.2s' }}> {/* Reset delay */}
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">आपके लिए विशिष्ट सिद्ध किये उत्पाद</h2> {/* Changed heading */}
+          <h2 className="text-3xl font-bold mb-6 text-white">आपके लिए विशिष्ट सिद्ध किये उत्पाद</h2> {/* Changed heading text color to white */}
           <p className="max-w-2xl mx-auto text-lg mb-8">
             Our products are crafted with intention, designed to help you harness the power of the cosmos in your daily
             life.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4"> {/* Changed bg color */}
                 {/* Using a generic icon placeholder */}
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
               </div>
@@ -104,7 +104,7 @@ return (
               <p>Ethically sourced and crafted with attention to astrological timing.</p>
             </div>
             <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4"> {/* Changed bg color */}
                  {/* Using a generic icon placeholder */}
                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
               </div>
@@ -112,7 +112,7 @@ return (
               <p>Created by experienced astrologers with deep cosmic knowledge.</p>
             </div>
             <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4"> {/* Changed bg color */}
                  {/* Using a generic icon placeholder */}
                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
               </div>

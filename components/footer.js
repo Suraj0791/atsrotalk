@@ -52,9 +52,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: contact@astrologyshop.com</li>
-              <li>Phone: +91 1234567890</li>
-              <li>Address: 123 Cosmic Street, Universe City</li>
+              <li>Email: info.samadhanhoga@gmail.com</li>
+              <li>Phone: +91 9315872914</li>
+              <li>Address: India</li>
             </ul>
           </div>
         </div>
@@ -66,4 +66,3 @@ export default function Footer() {
     </footer>
   )
 }
-

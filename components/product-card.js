@@ -48,10 +48,10 @@ export default function ProductCard({ product }) {
     };
   }, []);
 
-  const whatsappNumber = "917488612472"; // Remove '+' for the link
+  const whatsappNumber = "918178540753"; // Remove '+' for the link
   const whatsappMessage = encodeURIComponent("Hi i have a query");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-  const phoneLink = `tel:+917488612472`;
+  const phoneLink = `tel:+919315872914`;
 
   return (
     <div className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">

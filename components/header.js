@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react" // Import useEffect
+import { useState, useEffect } from "react"; // Import useEffect
 import Link from "next/link";
 import { useRouter } from "next/navigation"; // Import useRouter
 import { useCart } from "../context/cart-context";
@@ -27,34 +27,48 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-40">
+    <header className="bg-transparent shadow-sm sticky top-0 z-40">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-indigo-600">✨ Astrology Shop</span>
+              <span className="text-2xl font-bold text-blue-600">
+                ✨ Astrology Shop
+              </span>{" "}
+              {/* Changed text color */}
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6 items-center">
-            <Link href="/packages" className="text-gray-700 hover:text-indigo-600 transition-colors">
+            <Link
+              href="/packages"
+              className="text-gray-700 hover:text-indigo-600 transition-colors"
+            >
               सिद्ध किये पैकेज {/* Changed text */}
             </Link>
-            <Link href="/special-products" className="text-gray-700 hover:text-indigo-600 transition-colors">
+            <Link
+              href="/special-products"
+              className="text-gray-700 hover:text-indigo-600 transition-colors"
+            >
               सिद्ध किये उत्पाद {/* Changed text */}
             </Link>
-            <Link href="/our-story" className="text-gray-700 hover:text-indigo-600 transition-colors">
+            <Link
+              href="/our-story"
+              className="text-gray-700 hover:text-indigo-600 transition-colors"
+            >
               Our Story
             </Link>
           </nav>
 
           {/* Right side icons and search */}
           <div className="flex items-center space-x-2 md:space-x-4">
-             {/* Search Bar */}
-             <div className="hidden md:block"> {/* Hide on mobile initially */}
-                <SearchBar onSearch={handleSearch} />
-             </div>
+            {/* Search Bar */}
+            <div className="hidden md:block">
+              {" "}
+              {/* Hide on mobile initially */}
+              <SearchBar onSearch={handleSearch} />
+            </div>
 
             {/* Cart Icon */}
             <button
@@ -62,11 +76,12 @@ export default function Header() {
               className="relative p-2 text-gray-700 hover:text-indigo-600 transition-colors"
             >
               <ShoppingCart className="h-6 w-6" />
-               {isClient && cartItemCount > 0 && ( // Conditionally render based on isClient
-                 <span className="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
-                   {cartItemCount}
-                 </span>
-               )}
+              {isClient &&
+                cartItemCount > 0 && ( // Conditionally render based on isClient
+                  <span className="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+                    {cartItemCount}
+                  </span>
+                )}
             </button>
 
             {/* Mobile Menu Button */}
@@ -82,11 +97,16 @@ export default function Header() {
         {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t space-y-4">
-             {/* Search Bar in Mobile Menu */}
-             <div className="px-4">
-                <SearchBar onSearch={(term) => { handleSearch(term); setIsMobileMenuOpen(false); }} />
-             </div>
-             {/* Navigation Links */}
+            {/* Search Bar in Mobile Menu */}
+            <div className="px-4">
+              <SearchBar
+                onSearch={(term) => {
+                  handleSearch(term);
+                  setIsMobileMenuOpen(false);
+                }}
+              />
+            </div>
+            {/* Navigation Links */}
             <nav className="flex flex-col space-y-2">
               <Link
                 href="/packages"
