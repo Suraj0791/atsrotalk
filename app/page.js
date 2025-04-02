@@ -45,14 +45,12 @@ export default function Home() {
   }
 
 return (
-  <main className="min-h-screen">
+  <main className="min-h-screen overflow-x-hidden"> {/* Added overflow-x-hidden to prevent horizontal scrollbar during animation */}
     <HeroSection />
-    {/* Main Product Section */}
-    <section className="container mx-auto px-4 py-16">
-      <h2 className="text-3xl font-bold text-center mb-12">सिद्ध किये उत्पाद</h2> {/* Changed heading and increased bottom margin */}
 
-      {/* Vision Text Section */}
-      <div className="text-center max-w-3xl mx-auto mb-10 px-4"> {/* Container for vision text, added horizontal padding */}
+    {/* Vision Text Section - Moved up */}
+    <section className="container mx-auto px-4 py-16 animate-fade-in-down"> {/* Added animation */}
+      <div className="text-center max-w-3xl mx-auto px-4"> {/* Container for vision text, removed bottom margin */}
         <h3 className="text-2xl font-semibold mb-4 text-indigo-700">Vision of Samadhan Hoga</h3>
         <p className="text-lg text-gray-700 mb-4">
           At Samadhan Hoga, we envision a world where astrology is not just a mystical art but a guiding force for personal empowerment and transformation. Our goal is to help individuals align with their true potential by offering deeply personalized astrology-based products that bring clarity, positivity, and balance to their lives.
@@ -61,6 +59,12 @@ return (
           We believe that every individual’s journey is unique, and through the power of astrology, we provide meaningful solutions tailored to their needs.
         </p>
       </div>
+    </section>
+
+    {/* Main Product Section - Added animation */}
+    {/* Removed the separate Logo Image Section */}
+    <section className="container mx-auto px-4 py-16 animate-fade-in-down" style={{ animationDelay: '0.1s' }}> {/* Reset delay */}
+      <h2 className="text-3xl font-bold text-center mb-12">सिद्ध किये उत्पाद</h2> {/* Changed heading and increased bottom margin */}
 
       {/* Product Grid */}
       {loading ? (
@@ -82,8 +86,8 @@ return (
         )}
       </section>
 
-      {/* Special Products / Features Section */}
-      <section className="bg-gradient-to-r from-purple-900 to-indigo-900 py-20 text-white">
+      {/* Special Products / Features Section - Added animation */}
+      <section className="bg-gradient-to-r from-purple-900 to-indigo-900 py-20 text-white animate-fade-in-down" style={{ animationDelay: '0.2s' }}> {/* Reset delay */}
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">आपके लिए विशिष्ट सिद्ध किये उत्पाद</h2> {/* Changed heading */}
           <p className="max-w-2xl mx-auto text-lg mb-8">
@@ -119,8 +123,10 @@ return (
         </div>
       </section>
 
-      {/* Replace static carousel with the moving one */}
-      <MovingTestimonialCarousel />
+      {/* Replace static carousel with the moving one - Added animation */}
+      <div className="animate-fade-in-down" style={{ animationDelay: '0.3s' }}> {/* Reset delay */}
+        <MovingTestimonialCarousel />
+      </div>
     </main>
   );
 }

@@ -70,6 +70,16 @@ module.exports = {
 		  sm: "calc(var(--radius) - 4px)",
 		},
         keyframes: { // Add keyframes definition
+          'fade-in-down': { // Added fade-in-down
+            '0%': {
+              opacity: '0',
+              transform: 'translateY(-10px)'
+            },
+            '100%': {
+              opacity: '1',
+              transform: 'translateY(0)'
+            },
+          },
           marquee: {
             '0%': { transform: 'translateX(0%)' },
             '100%': { transform: 'translateX(-100%)' }, // Adjust based on duplication
@@ -77,6 +87,7 @@ module.exports = {
         },
         animation: { // Add animation utility
           marquee: 'marquee 30s linear infinite', // Adjust duration as needed
+          'fade-in-down': 'fade-in-down 0.5s ease-out' // Added fade-in-down animation utility
         },
 	  },
 	},
