@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react"; // Import useEffect
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation"; // Import useRouter
+import Image from "next/image"; // Import Image
+import { useRouter } from "next/navigation";
 import { useCart } from "../context/cart-context";
 import CartDrawer from "./cart-drawer";
 import SearchBar from "./search-bar"; // Import SearchBar
@@ -32,10 +33,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-blue-600">
-                ✨ Astrology Shop
-              </span>{" "}
-              {/* Changed text color */}
+              {/* Replace text with logo */}
+              <Image
+                src="/samadhan hoga logo white.png"
+                alt="Samadhan Hoga Logo"
+                width={210} // Increased width
+                height={56} // Increased height
+                className="h-14 w-auto" // Increased height class
+              />
             </Link>
           </div>
 

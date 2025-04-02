@@ -30,7 +30,11 @@ export default function HeroSection() {
           </h1>
           {/* Added new text line */}
           <h1 className="text-5xl md:text-7xl font-bold text-yellow-300 uppercase m-0 p-0 leading-none"> {/* Yellow, Bold, Uppercase */}
-            SAMADHAN HOGA
+            SAMADHAN
+          </h1>
+          {/* Added HOGA below SAMADHAN, white color, and padding-left */}
+          <h1 className="text-5xl md:text-7xl font-bold text-white uppercase m-0 p-0 leading-none pl-16 md:pl-24"> {/* White, Bold, Uppercase, Padded Left */}
+            HOGA
           </h1>
         </div>
       </div>
