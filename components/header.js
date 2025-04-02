@@ -32,15 +32,20 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
+            {/* Increased ml-8 to shift logo further right */}
+            <Link href="/" className="flex items-center ml-8">
               {/* Replace text with logo */}
               <Image
                 src="/samadhan hoga logo white.png"
                 alt="Samadhan Hoga Logo"
-                width={210} // Increased width
-                height={56} // Increased height
-                className="h-14 w-auto" // Increased height class
+                width={280} // Increased width again
+                height={75} // Increased height again (maintaining aspect ratio approx)
+                className="h-20 w-auto" // Increased height class again
               />
+              {/* Updated text next to logo */}
+              <span className="ml-4 text-lg font-semibold hidden md:inline">
+                <span className="text-yellow-500">SAMADHAN</span> <span className="text-black">HOGA</span>
+              </span>
             </Link>
           </div>
 

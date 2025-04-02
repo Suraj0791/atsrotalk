@@ -32,12 +32,12 @@ export default function HeroSection() {
           <h1 className="text-5xl md:text-7xl font-bold text-yellow-300 uppercase m-0 p-0 leading-none"> {/* Yellow, Bold, Uppercase */}
             SAMADHAN
           </h1>
-          {/* Added HOGA below SAMADHAN, white color, and padding-left */}
-          <h1 className="text-5xl md:text-7xl font-bold text-white uppercase m-0 p-0 leading-none pl-16 md:pl-24"> {/* White, Bold, Uppercase, Padded Left */}
+          {/* Added HOGA below SAMADHAN, white color, and padding-left - Increased padding further */}
+          <h1 className="text-5xl md:text-7xl font-bold text-white uppercase m-0 p-0 leading-none pl-80 md:pl-96"> {/* White, Bold, Uppercase, Padded Left - Further Increased Padding */}
             HOGA
           </h1>
-        </div>
-      </div>
+        </div> {/* Closing the flex container for text */}
+      </div> {/* Closing the relative z-20 container */}
     </section>
   );
 }
