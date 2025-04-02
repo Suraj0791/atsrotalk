@@ -50,9 +50,20 @@ return (
     {/* Main Product Section */}
     <section className="container mx-auto px-4 py-16">
       <h2 className="text-3xl font-bold text-center mb-12">सिद्ध किये उत्पाद</h2> {/* Changed heading and increased bottom margin */}
-      {/* Removed descriptive paragraph */}
 
-        {loading ? (
+      {/* Vision Text Section */}
+      <div className="text-center max-w-3xl mx-auto mb-10 px-4"> {/* Container for vision text, added horizontal padding */}
+        <h3 className="text-2xl font-semibold mb-4 text-indigo-700">Vision of Samadhan Hoga</h3>
+        <p className="text-lg text-gray-700 mb-4">
+          At Samadhan Hoga, we envision a world where astrology is not just a mystical art but a guiding force for personal empowerment and transformation. Our goal is to help individuals align with their true potential by offering deeply personalized astrology-based products that bring clarity, positivity, and balance to their lives.
+        </p>
+        <p className="text-lg text-gray-700">
+          We believe that every individual’s journey is unique, and through the power of astrology, we provide meaningful solutions tailored to their needs.
+        </p>
+      </div>
+
+      {/* Product Grid */}
+      {loading ? (
           <div className="flex justify-center py-12">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
           </div>
