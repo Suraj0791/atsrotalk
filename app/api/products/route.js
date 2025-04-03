@@ -5,9 +5,12 @@ import { isAdminRequest } from "@/lib/admin-auth"
 const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY)
 
 export async function GET(request) {
+  const isAdmin = await isAdminRequest(request)
   const { searchParams } = new URL(request.url)
   const page = Number.parseInt(searchParams.get("page") || "1")
-  const limit = Number.parseInt(searchParams.get("limit") || "12")
+  // Use a larger default limit for admin, but still allow overriding via query param if needed
+  const defaultLimit = isAdmin ? 1000 : 12
+  const limit = Number.parseInt(searchParams.get("limit") || defaultLimit.toString())
   const minPrice = Number.parseFloat(searchParams.get("minPrice") || "0")
   const maxPrice = Number.parseFloat(searchParams.get("maxPrice") || "100000")
   const sortBy = searchParams.get("sortBy") || "newest"
@@ -33,8 +36,11 @@ export async function GET(request) {
     query = query.order("price", { ascending: false })
   }
 
-  // Apply pagination
-  query = query.range(offset, offset + limit - 1)
+  // Apply pagination only for non-admin requests
+  if (!isAdmin) {
+    query = query.range(offset, offset + limit - 1)
+  }
+  // For admin requests, we don't apply .range(), fetching all matching results
 
   const { data, error, count } = await query
 
